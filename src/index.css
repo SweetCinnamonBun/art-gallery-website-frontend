@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: BigShoulders;
+  src: url("../src/assets/fonts/BigShoulders-Regular.ttf");
+}
+
+
+@theme {
+  --font-big: BigShoulders, "sans-serif"
+
+}
