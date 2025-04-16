@@ -24,7 +24,7 @@ const LocationPage = () => {
             className="w-full h-full object-cover"
           />
         </picture>
-        <Link className="group flex absolute top-0 md:left-40" to="/">
+        <Link className="group flex absolute top-0 md:left-20 lg:left-40" to="/">
           <div className="bg-[#D5966C] px-4 flex items-center group-hover:bg-[#151515] transition-colors duration-300">
             <img src={IconArrowLeft} alt="Right icon" className="w-6 h-6" />
           </div>
@@ -58,7 +58,7 @@ const LocationPage = () => {
           <h2 className="font-big text-[34px] leading-9 text-black font-bold">
             MODERN <br /> ART GALLERY
           </h2>
-          <p className="text-gray-800 w-96 md:-mb-5 mr-8">
+          <p className="text-gray-800 w-full md:w-96 md:-mb-5 mr-8">
             The Modern Art Gallery is free to all visitors and open seven days a
             week from 8am to 9pm. Find us at 99 King Street, Newport, USA
           </p>

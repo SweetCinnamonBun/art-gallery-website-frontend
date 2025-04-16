@@ -28,38 +28,39 @@ import { Link } from "react-router";
 const HomePage = () => {
   return (
     <div>
-      <header className="grid grid-cols-1 md:grid-cols-[5fr_3fr] h-[800px] max-h-[800px]">
-        <div className="h-64 min-h-64 w-full md:h-full">
-          
-          <picture className="w-full h-64 sm:h-80 ">
-            <source media="(min-width: 1024px)" srcSet={HeroImgDesktop} />
-            <source media="(min-width: 640px)" srcSet={HeroImgTablet} />
-            <img
-              src={HeroImgMobile}
-              alt="hero-image"
-              className="w-full h-full object-cover md:object-contain"
-            />
-          </picture>
-        </div>
-        <div className="flex flex-col justify-center md:-ml-30 space-y-8  py-10 px-5 ">
-          <h1 className="font-big text-7xl md:text-[96px] font-extrabold leading-16 md:leading-23">
-            MODERN <br /> ART GALLERY
-          </h1>
-          <p className="w-96">
-            The arts in the collection of the Modern Art Gallery all started
-            from a spark of inspiration. Will these pieces inspire you? Visit us
-            and find out.
-          </p>
-          <Link className="flex group" to="/location">
-            <span className="bg-[#151515] py-5 px-8 text-white font-big text-2xl tracking-widest group-hover:bg-[#D5966C] transition-colors duration-300">
-              OUR LOCATION
-            </span>
-            <div className="bg-[#D5966C] px-4 flex items-center group-hover:bg-[#151515] transition-colors duration-300"> 
-              <img src={IconRight} alt="Right icon" className="w-6 h-6" />
-            </div>
-          </Link>
-        </div>
-      </header>
+      <header className="grid grid-cols-1 md:grid-cols-[5fr_3fr] h-auto md:h-[680px] max-h-[800px]  md:px-10 lg:px-40 gap-5">
+  {/* Left: Image */}
+  <div className="relative h-64 sm:h-96 md:h-full w-full  mx-auto">
+    <picture className="absolute inset-0 w-full h-full md:rounded-md overflow-hidden">
+      <source media="(min-width: 1024px)" srcSet={HeroImgDesktop} />
+      <source media="(min-width: 640px)" srcSet={HeroImgTablet} />
+      <img
+        src={HeroImgMobile}
+        alt="hero-image"
+        className="w-full h-full object-cover"
+      />
+    </picture>
+  </div>
+
+  {/* Right: Text */}
+  <div className="flex flex-col justify-center space-y-8 px-5">
+    <h1 className="font-big text-5xl md:text-[80px] font-extrabold leading-tight md:leading-[1.1]">
+      MODERN <br /> ART GALLERY
+    </h1>
+    <p className="max-w-[400px] text-lg">
+      The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.
+    </p>
+    <Link className="flex group" to="/location">
+      <span className="bg-[#151515] py-5 px-8 text-white font-big text-2xl tracking-widest group-hover:bg-[#D5966C] transition-colors duration-300">
+        OUR LOCATION
+      </span>
+      <div className="bg-[#D5966C] px-4 flex items-center group-hover:bg-[#151515] transition-colors duration-300">
+        <img src={IconRight} alt="Right icon" className="w-6 h-6" />
+      </div>
+    </Link>
+  </div>
+</header>
+
       <main className="mt-26 md:mt-40">
         <div className="grid grid-cols-1  md:grid-cols-[1fr_2fr] px-5 md:px-10 lg:px-40 gap-x-32">
           <div className="flex flex-col items-center justify-center order-1 md:order-0 mt-5">
@@ -137,7 +138,7 @@ const HomePage = () => {
           <h2 className="font-big text-3xl font-bold lg:text-[34px] leading-9 text-white">
             MODERN <br /> ART GALLERY
           </h2>
-          <p className="text-white text-lg w-96 md:-mb-5 mr-8">
+          <p className="text-white text-lg md:w-96 md:-mb-5 mr-8">
             The Modern Art Gallery is free to all visitors and open seven days a
             week from 8am to 9pm. Find us at 99 King Street, Newport, USA
           </p>
