@@ -75,7 +75,7 @@ const HomePage = () => {
               </div>
               <p className="text-lg">
                 Wander through our distinct collections and find new insights
-                about our artists. Dive into the details of their creative
+                about our artistss. Dive into the details of their creative
                 process
               </p>
             </div>
