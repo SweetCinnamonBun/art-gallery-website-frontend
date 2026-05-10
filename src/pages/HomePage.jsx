@@ -28,38 +28,44 @@ import { Link } from "react-router";
 const HomePage = () => {
   return (
     <div>
-      <header className="grid grid-cols-1 md:grid-cols-[5fr_3fr] h-auto md:h-[680px] max-h-[800px]  md:px-10 lg:px-40 gap-5">
-  {/* Left: Image */}
-  <div className="relative h-64 sm:h-96 md:h-full w-full  mx-auto">
-    <picture className="absolute inset-0 w-full h-full md:rounded-md overflow-hidden">
-      <source media="(min-width: 1024px)" srcSet={HeroImgDesktop} />
-      <source media="(min-width: 640px)" srcSet={HeroImgTablet} />
-      <img
-        src={HeroImgMobile}
-        alt="hero-image"
-        className="w-full h-full object-cover"
-      />
-    </picture>
-  </div>
+      <header className="bg-white md:bg-gradient-to-r md:from-black md:from-50% md:to-white md:to-50%">
+        {/* Left: Image */}
+        <div className="grid grid-cols-1 md:grid-cols-[8fr_6fr] h-auto md:h-[680px] max-h-[800px]  md:px-10 lg:px-40 gap-5">
+          <div className="w-full">
+            <div className="relative h-64 sm:h-96 md:h-full w-full  mx-auto">
+              <picture className="absolute inset-0 w-full h-full  overflow-hidden">
+                <source media="(min-width: 1024px)" srcSet={HeroImgDesktop} />
+                <source media="(min-width: 640px)" srcSet={HeroImgTablet} />
+                <img
+                  src={HeroImgMobile}
+                  alt="hero-image"
+                  className="w-full h-full object-cover"
+                />
+              </picture>
+            </div>
+          </div>
 
-  {/* Right: Text */}
-  <div className="flex flex-col justify-center space-y-8 px-5">
-    <h1 className="font-big text-5xl md:text-[80px] font-extrabold leading-tight md:leading-[1.1]">
-      MODERN <br /> ART GALLERY
-    </h1>
-    <p className="max-w-[400px] text-lg">
-      The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.
-    </p>
-    <Link className="flex group" to="/location">
-      <span className="bg-[#151515] py-5 px-8 text-white font-big text-2xl tracking-widest group-hover:bg-[#D5966C] transition-colors duration-300">
-        OUR LOCATION
-      </span>
-      <div className="bg-[#D5966C] px-4 flex items-center group-hover:bg-[#151515] transition-colors duration-300">
-        <img src={IconRight} alt="Right icon" className="w-6 h-6" />
-      </div>
-    </Link>
-  </div>
-</header>
+          {/* Right: Text */}
+          <div className="flex flex-col justify-center space-y-8 px-5">
+            <h1 className="font-big text-5xl md:text-[80px] font-extrabold leading-tight md:leading-[1.1]">
+              MODERN <br /> ART GALLERY
+            </h1>
+            <p className="max-w-[400px] text-lg">
+              The arts in the collection of the Modern Art Gallery all started
+              from a spark of inspiration. Will these pieces inspire you? Visit us
+              and find out.
+            </p>
+            <Link className="flex group" to="/location">
+              <span className="bg-[#151515] py-5 px-8 text-white font-big text-2xl tracking-widest group-hover:bg-[#D5966C] transition-colors duration-300">
+                OUR LOCATION
+              </span>
+              <div className="bg-[#D5966C] px-4 flex items-center group-hover:bg-[#151515] transition-colors duration-300">
+                <img src={IconRight} alt="Right icon" className="w-6 h-6" />
+              </div>
+            </Link>
+          </div>
+        </div>
+      </header>
 
       <main className="mt-26 md:mt-40">
         <div className="grid grid-cols-1  md:grid-cols-[1fr_2fr] px-5 md:px-10 lg:px-40 gap-x-32">
